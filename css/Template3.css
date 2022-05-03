@@ -887,3 +887,104 @@ header .container ul li > a:hover::before{
 .our_skills .progress .python > div span{
     width: 80%;
 }
+/***********************************************************************************************************************************/
+.how-it-works{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #ececec;
+}
+.how-it-works .container .steps{
+    padding-top: 50px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 40px;
+    
+}
+.how-it-works .container .Works {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+
+}
+@media (min-width: 1200px) {
+    .how-it-works .container .Works{
+        text-align: left;
+    }
+}
+.how-it-works .container .Works .step{
+    padding-bottom: 30px;
+    background-color: #ffffff4e;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+@media (min-width: 1200px) {
+    .how-it-works .container .Works .step{
+        display: flex;
+        align-items: center;
+        padding: 28px;
+    }
+}
+.how-it-works .container .Works .step::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #ececec;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+    
+}
+.how-it-works .container .Works .step:hover::after{
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    animation: layer 0.5s linear forwards;
+}
+@keyframes layer{
+    0%{
+        width: 0;
+        height: 0;
+        
+    }
+    100%{
+        width: 150%;
+        height: 150%;
+        
+    }
+}
+.how-it-works .container .Works .step img{ 
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+.how-it-works .container .Works .step .text{
+    position: relative;
+    z-index: 1;
+}
+
+.how-it-works .container .Works .step h1{
+    font-size: 20px;
+    
+}
+.how-it-works .container .Works .step p{
+    color: gray;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.how-it-works .container .steps .img {
+    display: none;
+}
+@media (min-width: 1200px) {
+    .how-it-works .container .steps .img {
+        display: block;
+        max-width: 100%;
+    }
+}
