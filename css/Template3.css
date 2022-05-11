@@ -1143,3 +1143,129 @@ header .container ul li > a:hover::before{
     }
 }
 /***************************************************************/
+.pricing-plans{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #ececec;
+    
+}
+.pricing-plans .levels{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(260px , 1fr));
+    gap: 50px;
+}
+.pricing-plans .levels .level{
+    background-color: white;
+    padding:50px 20px;
+    box-shadow: 0 0 6px 1px #0000003b;
+    position: relative;
+}
+.pricing-plans .levels .level::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to left , white 50%, #ececec7a 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
+    transition: 0.3s;
+}
+.pricing-plans .levels .level:hover::after{
+    background-position:left bottom ;
+}
+.pricing-plans .levels .level::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to right , white 50%, #ececec7a 50%);
+    background-position: left bottom;
+    background-size: 200% 100%;
+    transition: 0.3s;
+}
+.pricing-plans .levels .level:hover::before{
+    background-position:right bottom ;
+}
+.pricing-plans .levels .level:nth-child(2){
+    position: relative;
+    top: -25px;
+}
+.pricing-plans .levels .level .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+    z-index: 1;
+}
+.pricing-plans .levels .level img{
+    width: 75px;
+    padding: 20px 0;
+}
+.pricing-plans .levels .level .content > h1{
+    font-size: 25px;
+    padding: 0 0 20px;
+}
+
+.pricing-plans .levels .level .content > div{
+    font-size: 60px;
+    font-weight: 700;
+    color: purple;
+}
+.pricing-plans .levels .level .content > span{
+    position: absolute;
+    bottom: 0;
+    color: gray;
+}
+.pricing-plans .levels .level span{
+    display: block;
+    padding: 20px 0 0;
+    position: relative;
+    z-index: 1;
+}
+.pricing-plans .levels .level span span{
+    padding: 20px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #cecece;
+}
+.pricing-plans .levels .level span span::before{
+    font-size: 19px;
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    left: 0;
+    top: 0;
+    font-weight: bolder;
+    padding-right: 10px;
+    color: purple;
+}
+.pricing-plans .levels .level .button{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0;
+}
+.pricing-plans .levels .level .button button{
+    padding:15px 20px;
+    border-radius: 4px;
+    border: 2px solid purple;
+    background-color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.pricing-plans .levels .level .button button:hover{
+    background-color: purple;
+}
+.pricing-plans .levels .level .button button a{
+    font-size: 15px;
+    color: purple;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.pricing-plans .levels .level .button button:hover a{
+    color: white;
+}
