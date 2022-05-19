@@ -26,9 +26,9 @@
 body{
     font-family: 'Cairo', sans-serif;
 }
-/* html{
+html{
     scroll-behavior: smooth;
-} */
+}
 
 .container{
     padding-left: 40px;
@@ -159,9 +159,9 @@ header .container ul{
         margin: 5px;
     }
 }
-/*header .container ul .active:hover .otherlinkes{
+header .container ul .active:hover .otherlinkes{
     display: flex;
-}*/
+}
 header .container ul li > a{
     display: block;
     padding: 30px 50px;
@@ -191,10 +191,27 @@ header .container ul .otherlinkes{
     transition: 0.3s;
     z-index: 1;
 }
+@media (max-width:767px) {
+    header .container ul .otherlinkes{
+        left:0;
+        top: unset;
+        width: 100%;
+    }
+}
+@media (max-width:992px){
+    header .container ul .otherlinkes .img{
+        display: none;
+    }
+}
 header .container ul .otherlinkes .items{
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
     column-gap: 20px;
+}
+@media (max-width:767px){
+    header .container ul .otherlinkes .items{
+        display: block;
+    }
 }
 header .container ul .otherlinkes .items .group .item{
     display: flex;
@@ -225,7 +242,6 @@ header .container ul li a::before{
     transition: 0.3s;
 }
 header .container ul li > a:hover::before{
-    
     width: 100%;
 }
 /***********************************************************************************************************************************/
@@ -1425,7 +1441,6 @@ header .container ul li > a:hover::before{
 .discount {
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
-    padding: 50px 0;
     position: relative;
     
 }
@@ -1546,8 +1561,13 @@ header .container ul li > a:hover::before{
 .footer{
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: black;
+    background-color: #000000e8;
     
+}
+@media (max-width:992px) {
+    .footer{
+        margin: 20px 0 0;
+    }
 }
 .footer .container{
     display: grid;
@@ -1604,7 +1624,7 @@ header .container ul li > a:hover::before{
 }
 .footer .container .links .link{
     padding: 10px 0;
-    border-bottom: 1px solid #ececec42;
+    border-bottom: 1px solid #ececec42 ;
 }
 .footer .container .links .link:last-child{
     border: none;
@@ -1613,6 +1633,11 @@ header .container ul li > a:hover::before{
     color: purple;
     padding-right: 10px;
     font-size: 20px;
+    transition: 0.5s linear;
+}
+.footer .container .links .link:hover{
+    transform: translateX(10px);
+    cursor: pointer;
 }
 .footer .container .contact{
     color: #ececec;
